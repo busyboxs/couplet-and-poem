@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>写诗</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<div id="app">
+    <div class="header">
+        <h1 class="title" align="center">为你写诗</h1>
+        <p class="desc" align="center">输入诗的主题，点击生成诗即可！</p>
+        {% if error %}
+        <p class=error><strong>错误:</strong> {{ error }}
+        {% endif %}
+        <div class="couplet-button_group">
+        <form method="post" >
+            <input type="text" title="输入诗主题(少于5个字)" class="couplet-input" name="theme" placeholder="请输入主题(少于5个字)" required>
+            <input type="submit" value="生成诗" class="couplet-btn">
+        </form>
+        <form method="post">
+            <input type="submit" value="返回" class="couplet-btn-back" name="back">
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

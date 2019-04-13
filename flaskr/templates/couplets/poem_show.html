@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写诗</title>
+    <link rel="stylesheet" href="../../static/index.css">
+</head>
+<body>
+<div id="app">
+    <div class="header">
+        <h1 class="title" align="center">为你写诗</h1>
+
+        <p class="desc" align="center">输入诗的主题，点击生成诗即可！</p>
+        {% if error %}
+        <p class=error><strong>错误:</strong> {{ error }}</p>
+        {% endif %}
+        <div class="couplet-button_group">
+        <form method="post" >
+            <input type="text" class="couplet-input" name="theme" value= {{title}} required>
+            <input type="submit" value="生成诗" class="couplet-btn">
+        </form>
+        <form method="post">
+            <input type="submit" value="返回" class="couplet-btn-back" name="back">
+        </form>
+        </div>
+    </div>
+
+    {% if not error %}
+    <div class="content">
+        <div class="couplet-text couplet-text_up">
+            <div class="couplet-bd" align="center">
+                {% for c in title %}
+                <span>{{c}}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% for line in poem.split('\n')%}
+        <div class="couplet-text couplet-text_down">
+            <div class="couplet-bd" align="center">
+                {% for c in line %}
+                <span>{{c}}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

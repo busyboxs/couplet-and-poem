@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("img/background1.png");
+  background-repeat: no-repeat;
+  background-color: #eee;
+  width: 100%;
+  background-size: 100% 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", "PingFang SC", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", sans-serif;
+}
+
+#app {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 250px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #484848;
+  text-align: center;
+}
+
+.desc {
+  margin-bottom: 20px;
+  color: #898989;
+  font-size: 16px;
+  text-align: center;
+}
+
+.error {
+  margin-bottom: 20px;
+  color: #ff0000;
+  font-size: 16px;
+  text-align: center;
+}
+
+.couplet-button_group {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  height: 40px;
+  font-size: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.couplet-button_group::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.couplet-button_group .couplet-input {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 110px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border: none;
+  font-size: 20px;
+}
+.couplet-button_group .couplet-btn {
+  position: absolute;
+  top: 0;
+  right: 101px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.couplet-button_group .couplet-btn-back {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.choose-button_group {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  height: 40px;
+  font-size: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.choose-button_group .couplet-btn-left {
+  position: absolute;
+  top: 0;
+  right: 290px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.choose-button_group .couplet-btn-right {
+  position: absolute;
+  top: 0;
+  right: 140px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.content {
+  padding: 0 50px;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 160px;
+}
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { .content { min-height: 160px; } }
+@media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) { .content { min-height: 180px; } }
+@media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) { .content { min-height: 200px; } }
+.couplet-text {
+  margin-bottom: 10px;
+  display: flex;
+}
+.couplet-text .couplet-hd {
+  width: 70px;
+  font-size: 20px;
+}
+.couplet-text .couplet-bd {
+  flex: 1;
+}
+.couplet-text span {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 24px;
+  vertical-align: middle;
+  color: #cc2f2e;
+  background-image: url("img/text-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article {
+  padding: 30px;
+}
+
+.article div {
+  margin: 20px;
+}
+
+.article img {
+  width: 40%;
+  margin-left: 30%;
+}

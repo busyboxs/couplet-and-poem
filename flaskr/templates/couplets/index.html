@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对联与诗</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+<div id="app">
+    <div class="header">
+        <h1 class="title" align="center">对联与诗</h1>
+
+        <p class="desc" align="center">可以选择对对联或者写诗</p>
+        <div class="choose-button_group">
+        <form method="post" >
+            <input type="submit" value="对对联" class="couplet-btn-left" name="couplets">
+            <input type="submit" value="写诗" class="couplet-btn-right" name="poem">
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

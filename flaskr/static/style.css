@@ -1,0 +1,12 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body { background-image: url("img/texture.png"); background-color: #eee; font-family: "Helvetica Neue", "PingFang SC", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", sans-serif; }
+.header { padding-top: 20px; margin-bottom: 20px; }
+.title { margin-bottom: 20px; font-size: 22px; color: #484848; text-align: center; }
+
+.desc { margin-bottom: 20px; color: #898989; font-size: 16px; text-align: center; }
+
+.error { margin-bottom: 20px; color: #ff0000; font-size: 16px; text-align: center; }
+
+input.danger { color: #cc2f2e; }
+input[type=submit] { align-self: start; min-width: 10em; }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对对联</title>
+    <link rel="stylesheet" href="../../static/index.css">
+</head>
+<body>
+<div id="app">
+    <div class="header">
+        <h1 class="title" align="center">简单的对对联</h1>
+
+        <p class="desc" align="center">输入对联主题，点击生成对联即可！</p>
+        {% if error %}
+        <p class=error><strong>错误:</strong> {{ error }}</p>
+        {% endif %}
+        <div class="couplet-button_group">
+        <form method="post" >
+            <input type="text" class="couplet-input" name="theme" value= {{title}} required>
+            <input type="submit" value="生成对联" class="couplet-btn">
+        </form>
+        <form method="post">
+            <input type="submit" value="返回" class="couplet-btn-back" name="back">
+        </form>
+        </div>
+    </div>
+
+    {% if not error %}
+    <div class="content">
+        <div class="couplet-text couplet-text_up">
+            <div class="couplet-hd">上联：</div>
+            <div class="couplet-bd" >
+                {% for c in first %}
+                <span>{{c}}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="couplet-text couplet-text_down">
+            <div class="couplet-hd">下联：</div>
+            <div class="couplet-bd">
+                {% for c in second %}
+                <span>{{c}}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="couplet-text couplet-text_down">
+            <div class="couplet-hd">横批：</div>
+            <div class="couplet-bd">
+                {% for c in center %}
+                <span>{{c}}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
