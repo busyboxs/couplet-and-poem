@@ -160,3 +160,17 @@ def parse_error(data):
         error = ERROR_DICT[str(code)]
         return error
     return None
+
+
+# 带有错误处理的调用智能写诗接口（样例）
+def test_get_poem():
+    token_key = '通过调用 get_token_key() 获取的 token'
+    index = random.randint(0, 10)
+    data = get_poem('春节建行卡建好了', token_key, index)
+    error = parse_error(data)
+    if error:
+        print(f'错误：{error}')
+    else:
+        title, content = parse_poem(data)
+        print(title)
+        print(content)
