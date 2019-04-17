@@ -21,10 +21,10 @@
 
 |参数|类型|描述|
 |:---:|:---:|:---:|
-|log_id|uint64|请求唯一标识码|
-|first|string|春联上联：成7-9个字的上联|
-|second|string|春联下联：生成7-9个字的春联下联|
-|center|string|春联横批：生成4个字的春联横批|
+|couplets|object|object嵌套结构，对应返回的春联|
+|+first|string|春联上联：成7-9个字的上联|
+|+second|string|春联下联：生成7-9个字的春联下联|
+|+center|string|春联横批：生成4个字的春联横批|
 
 其输出为 json 字符串。例如：“春节”对应的一个输出为
 
@@ -49,9 +49,9 @@
 
 |参数|类型|描述|
 |:---:|:---:|:---:|
-|log_id|uint64|请求唯一标识码|
-|title|string|诗名，即用户输入作诗主题|
-|content|string|作诗结果：为一首7言绝句|
+|poem|array|数组结构，元素对应7言绝句诗|
+|+title|string|诗名，即用户输入作诗主题|
+|+content|string|作诗结果：为一首7言绝句|
 
 其输出也是 json 字符串，例如：“百度”对应的一个输出为
 
